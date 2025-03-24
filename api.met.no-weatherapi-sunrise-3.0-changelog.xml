@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:admin="http://webns.net/mvcb/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+>
+
+<channel rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation">
+<title>Sunrise - Calculate sun or moon events, as seen from a specific location on Earth</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation</link>
+<description>Returns a GeoJSON document indicating time and direction to when the sun (or moon) is on
+its highest point on a given date (defaults to today) as seen from a specified
+point on Earth, as well as the preceding sun/moonrise and following sun/moonset (which may
+not be on the same date). The lowest point in the cycle is also returned. Note that
+any or all of these may be &#x3C;code&#x3E;null&#x3C;/code&#x3E;.The source code is available on , if you
+have a server it&#x27;s usually more efficient to run it locally than to query the API.</description>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_3.0_in_production:_2023-06-15" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#new_version_3.0_beta:_2023-01-03" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_height_parameter_fixed:_2020-01-03" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#more_data_for_version_2.0:_2019-03-14" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_released:_2018-11-19" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_beta:_2018-04-25" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_beta:_2018-03-09" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.1:_2015-11-01" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.0:_2014-04-01" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.0:_2012-01-11" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.0:_2009-06-02" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_0.9:_2008-09-10" />
+  <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_0.8:_2008-06-24" />
+ </rdf:Seq>
+</items>
+<image rdf:resource="https://api.met.no/logo.png" />
+</channel>
+<image rdf:about="https://api.met.no/logo.png">
+<title>MET Norway WeatherAPI: Sunrise</title>
+<url>https://api.met.no/logo.png</url>
+<link>https://api.met.no</link>
+</image>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_3.0_in_production:_2023-06-15">
+<title>Version 3.0 in production: 2023-06-15</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_3.0_in_production:_2023-06-15</link>
+<description>&#x3C;p&#x3E;Version 2.x have been deprecated, and will be terminated on 2023-09-01&#x3C;/p&#x3E;</description>
+<dc:date>2023-06-15</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#new_version_3.0_beta:_2023-01-03">
+<title>New version 3.0 beta: 2023-01-03</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#new_version_3.0_beta:_2023-01-03</link>
+<description>&#x3C;ul&#x3E;
+	&#x3C;li&#x3E; Total rewrite now using GeoJSON format instead of XML&#x3C;/li&#x3E;
+	&#x3C;li&#x3E; Sun and moon events are now separate requests, instead of in the same document&#x3C;/li&#x3E;
+	&#x3C;li&#x3E; Date is now calculated as the local mean solar day, instead of calendar date as before.
+This ensures sunrise always comes before sunset&#x3C;/li&#x3E;
+	&#x3C;li&#x3E; The &#x3C;code&#x3E;offset&#x3C;/code&#x3E; parameter is now optional, with timestamps defaulting to UTC&#x3C;/li&#x3E;
+	&#x3C;li&#x3E; The &#x3C;code&#x3E;days&#x3C;/code&#x3E; parameter has been removed, output is now only 1 day to better optimize caching and response times&#x3C;/li&#x3E;
+	&#x3C;li&#x3E; The &#x3C;code&#x3E;height&#x3C;/code&#x3E; parameter has been removed, as sunrise times don&#x27;t really change with altitude given flat terrain&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+</description>
+<dc:date>2023-01-03</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_height_parameter_fixed:_2020-01-03">
+<title>Version 2.0 height parameter fixed: 2020-01-03</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_height_parameter_fixed:_2020-01-03</link>
+<description>&#x3C;p&#x3E;Due to an error the &#x3C;code&#x3E;height&#x3C;/code&#x3E; parameter was accidentally called &#x3C;code&#x3E;alt&#x3C;/code&#x3E; in
+the interface (but not in the documentation). This has now been fixed.&#x3C;/p&#x3E;</description>
+<dc:date>2020-01-03</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#more_data_for_version_2.0:_2019-03-14">
+<title>More data for version 2.0: 2019-03-14</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#more_data_for_version_2.0:_2019-03-14</link>
+<description>&#x3C;p&#x3E;&#x3C;code&#x3E;moonposition&#x3C;/code&#x3E; is now repeated for every day in the interval, not just the
+first day. We have also added a &#x3C;code&#x3E;phase&#x3C;/code&#x3E; attribute to &#x3C;code&#x3E;moonposition&#x3C;/code&#x3E; to
+show the moon phase for each day, not just the first. Max days is now set to 15.&#x3C;/p&#x3E;&#x3C;p&#x3E;Since there are only additions to the existing format we assume keeping the
+existing version is more convenient than bumping so that everyone will have
+to modify their existing clients.&#x3C;/p&#x3E;</description>
+<dc:date>2019-03-14</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_released:_2018-11-19">
+<title>Version 2.0 released: 2018-11-19</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_released:_2018-11-19</link>
+<description>&#x3C;p&#x3E;New v.2 XML format is finally ready for production (no changes from beta).
+Note that offset parameter now is of type +/-HH:MM to conform to ISO and XSD standards.
+Maximum days now set to 10.&#x3C;/p&#x3E;&#x3C;p&#x3E;Version 1.1 will expire 2019-02-15&#x3C;/p&#x3E;</description>
+<dc:date>2018-11-19</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_beta:_2018-04-25">
+<title>Version 2.0 beta: 2018-04-25</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_beta:_2018-04-25</link>
+<description>&#x3C;p&#x3E;XML format trimmed, toned and beefed up, date and offset params are now mandatory.
+Expected to go into production in beginning of May.&#x3C;/p&#x3E;</description>
+<dc:date>2018-04-25</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_beta:_2018-03-09">
+<title>Version 2.0 beta: 2018-03-09</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_2.0_beta:_2018-03-09</link>
+<description>&#x3C;p&#x3E;Rewrite using new backend; only simple request supported,
+with different interface and XML format&#x3C;/p&#x3E;</description>
+<dc:date>2018-03-09</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.1:_2015-11-01">
+<title>Version 1.1: 2015-11-01</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.1:_2015-11-01</link>
+<description>&#x3C;p&#x3E;Bugfix: publish 0, 1, or 2 moon rise / moon sets per date.
+Version 1.0 expires 2016-06-06&#x3C;/p&#x3E;</description>
+<dc:date>2015-11-01</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.0:_2014-04-01">
+<title>Version 1.0: 2014-04-01</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.0:_2014-04-01</link>
+<description>&#x3C;p&#x3E;Added direct request to astronomical event library.&#x3C;/p&#x3E;&#x3C;p&#x3E;Uses JPL ephemerides DE405.&#x3C;/p&#x3E;&#x3C;p&#x3E;Output now agrees well with &#x22;Almanakk for Norge&#x22;.&#x3C;/p&#x3E;</description>
+<dc:date>2014-04-01</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.0:_2012-01-11">
+<title>Version 1.0: 2012-01-11</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.0:_2012-01-11</link>
+<description>&#x3C;p&#x3E;Maximum 30 days are accepted in from-to search&#x3C;/p&#x3E;</description>
+<dc:date>2012-01-11</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.0:_2009-06-02">
+<title>Version 1.0: 2009-06-02</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_1.0:_2009-06-02</link>
+<description>&#x3C;ul&#x3E;
+	&#x3C;li&#x3E; Better use of algorithm, should give more accurate data&#x3C;/li&#x3E;
+	&#x3C;li&#x3E; New parameters from and to, returning all events in the range&#x3C;/li&#x3E;
+	&#x3C;li&#x3E; Either date or from and to is now compulsory&#x3C;/li&#x3E;
+	&#x3C;li&#x3E; Version 0.9 will expire 2009-06-24&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+</description>
+<dc:date>2009-06-02</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_0.9:_2008-09-10">
+<title>Version 0.9: 2008-09-10</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_0.9:_2008-09-10</link>
+<description>&#x3C;p&#x3E;Algorithm for the computation is updated.  Should be more accurate.
+Version 0.8 will expire 2008-10-01&#x3C;/p&#x3E;</description>
+<dc:date>2008-09-10</dc:date>
+</item>
+<item rdf:about="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_0.8:_2008-06-24">
+<title>Version 0.8: 2008-06-24</title>
+<link>https://api.met.no/weatherapi/sunrise/3.0/documentation#version_0.8:_2008-06-24</link>
+<description>&#x3C;p&#x3E;New product, not in accordance with the Norwegian almanac.&#x3C;/p&#x3E;</description>
+<dc:date>2008-06-24</dc:date>
+</item>
+</rdf:RDF>
