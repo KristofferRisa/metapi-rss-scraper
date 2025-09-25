@@ -17,8 +17,9 @@
 its highest point on a given date (defaults to today) as seen from a specified
 point on Earth, as well as the preceding sun/moonrise and following sun/moonset (which may
 not be on the same date). The lowest point in the cycle is also returned. Note that
-any or all of these may be &#x3C;code&#x3E;null&#x3C;/code&#x3E;.The source code is available on , if you
-have a server it&#x27;s usually more efficient to run it locally than to query the API.</description>
+any or all of these may be &#x3C;code&#x3E;null&#x3C;/code&#x3E;.The source code is available on  or
+as container images. If you have a server it&#x27;s much more efficient to run it
+locally than to query api.met.no.</description>
 <items>
  <rdf:Seq>
   <rdf:li rdf:resource="https://api.met.no/weatherapi/sunrise/3.0/documentation#version_3.0_in_production:_2023-06-15" />
